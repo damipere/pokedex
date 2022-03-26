@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <!--Fuente importada de google-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"/>
+    <!--Jquery-->
+    <link
+      rel="stylesheet"
+      href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css"/>
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <!--Hoja de estilo-->
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!--contenedor completo-->
+    <div class="fullcontenedor">
+        <!--Contenedor logo-->
+      <center>
+        <div class="contlogo">
+          <img a class="logo" src="img/logo.png" alt="Logo pokemon" />
+        </div>
+      </center>
+    <!--contenedor usuario-->
+      <div id="contenedor" class="contenedor">
+        <div>
+          <center>
+            <div class="cliente">
+              <input
+                class="entrada"
+                type="text"
+                placeholder="Ingresa nombre o ID"
+                id="pokeName"
+                name="pokeName"/>
+              <button class="buscar" onclick="fetchPokemon()">Buscar</button>
+            </div>
+    <!--Nombre e id-->
+            <div class="nameid">
+              <div class="pokeid">
+                <p id="pokeid"></p>
+              </div>
+              <div class="pokename">
+                <p id="pokenamebus"></p>
+              </div>
+            </div>
+    <!--Imagen pokemon-->
+            <div class="contimgpoke">
+              <img
+                class="imgpoke"
+                src="img/pokeball.png"
+                alt="Pokemon"
+                id="pokeImg"
+              />
+            </div>
+    <!--Contenedor clase pokemon-->
+            <div class="tipoclase">
+              <div id="tipopokemon" class="tipo"></div>
+            </div>
+          </center>
+    <!--Contenedor estadisticas-->
+          <div id="habipokes" class="habipoke">
+            <div class="progress-bar blue">
+              <span id="stats0"></span>
+            </div>
+            <p id="text0"></p>
+            <div class="progress-bar orange">
+              <span id="stats1"></span>
+            </div>
+            <p id="text1"></p>
+            <div class="progress-bar green">
+              <span id="stats2"></span>
+            </div>
+            <p id="text2"></p>
+            <div class="progress-bar red">
+              <span id="stats3"></span>
+            </div>
+            <p id="text3"></p>
+            <div class="progress-bar brown">
+              <span id="stats4"></span>
+            </div>
+            <p id="text4"></p>
+            <div class="progress-bar pink">
+              <span id="stats5"></span>
+            </div>
+            <p id="text5"></p>
+          </div>
+        </div>
+    <!--Contendor evoluciones-->
+        <div id="contenedorevo">
+    <!--Contenedor detalles pokemon-->
+          <div class="contenedortext">
+            <table class="tabla">
+              <tr>
+                <td>HEIGHT:</td>
+                <td id="col1"></td>
+              </tr>
+              <tr>
+                <td>WEIGHT:</td>
+                <td id="col2"></td>
+              </tr>
+              <tr>
+                <td>FIRST APPEARED:</td>
+                <td id="col3"></td>
+              </tr>
+              <tr>
+                <td>GENERATION:</td>
+                <td id="col4"></td>
+              </tr>
+              <tr>
+                <td>ABILITIES:</td>
+                <td id="col5"></td>
+              </tr>
+              <tr>
+                <td>MOVES:</td>
+                <td id="col6">
+                  <select
+                    class="multiple"
+                    disabled
+                    multiple
+                    name=""
+                    id="mult"
+                  ></select>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <center><h3>EVOLUTIONS</h3></center>
+    <!--Contenedor imagenes de evolucion-->
+          <div class="contevolucion">
+            <div id="primera" class="primera"></div>
+            <div>
+              <div class="segunda" id="segunda"></div>
+            </div>
+            <div id="tercera" class="tercera"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <!--Hoja de Scripts-->
+    <script src="js/javascript.js"></script>
+  </footer>
+</html>
